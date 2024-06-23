@@ -1,33 +1,58 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-import "./App.css";
+import { useMemo, useState } from "react";
+import styles from "./style.module.css";
+import { Quiz1 } from "./components/Quiz1";
+import { Quiz2 } from "./components/Quiz2";
+import { Quiz3 } from "./components/Quiz3";
+import { Quiz4 } from "./components/Quiz4";
+import { Quiz5 } from "./components/Quiz5";
+import { Quiz6 } from "./components/Quiz6";
+import { Quiz7 } from "./components/Quiz7";
+import { Quiz8 } from "./components/Quiz8";
+
+const numberComponentMap = {
+  1: Quiz1,
+  2: Quiz2,
+  3: Quiz3,
+  4: Quiz4,
+  5: Quiz5,
+  6: Quiz6,
+  7: Quiz7,
+  8: Quiz8,
+} as const;
+
+type NumberComponentMapKey = keyof typeof numberComponentMap;
 
 function App() {
-  const [count, setCount] = useState(0);
+  const [number, setNumber] = useState<NumberComponentMapKey | null>(null);
+
+  const handleClick = (n: NumberComponentMapKey) => () => {
+    setNumber(n);
+  };
+
+  const QuizComponent = useMemo(
+    () => (number === null ? null : numberComponentMap[number]),
+    [number]
+  );
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
+      Quiz
+      {Object.keys(numberComponentMap).map((key) => (
+        <button
+          key={key}
+          className={styles.button}
+          onClick={handleClick(Number(key) as NumberComponentMapKey)}
+        >
+          {key}
         </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
+      ))}
+      <div className={styles.container}>
+        {QuizComponent && (
+          <div className={styles.item}>
+            <QuizComponent />
+          </div>
+        )}
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
   );
 }
