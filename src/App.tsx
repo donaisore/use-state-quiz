@@ -8,8 +8,10 @@ import { Quiz5 } from "./components/Quiz5";
 import { Quiz6 } from "./components/Quiz6";
 import { Quiz7 } from "./components/Quiz7";
 import { Quiz8 } from "./components/Quiz8";
+import { Quiz0 } from "./components/Quiz0";
 
 const numberComponentMap = {
+  0: Quiz0,
   1: Quiz1,
   2: Quiz2,
   3: Quiz3,

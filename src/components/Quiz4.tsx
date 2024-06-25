@@ -6,7 +6,7 @@ export const Quiz4 = () => {
 
   const handleClick = () => {
     setCount(count + 1);
-    setCount((n) => n + 1);
+    setCount(count + 1);
   };
 
   return (

@@ -7,9 +7,9 @@ export const Quiz7 = () => {
   const handleClick = () => {
     setCount(1);
     setTimeout(() => {
+      setCount(2);
       setCount(3);
     }, 1000);
-    setCount(2);
   };
 
   return (

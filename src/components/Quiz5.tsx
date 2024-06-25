@@ -5,7 +5,7 @@ export const Quiz5 = () => {
   const [count, setCount] = useState(0);
 
   const handleClick = () => {
-    setCount((n) => n + 1);
+    setCount((n) => n + 1); // updater function
     setCount(count + 1);
   };
 
