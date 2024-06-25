@@ -10,6 +10,7 @@ export const Quiz7 = () => {
       setCount(2);
       setCount(3);
     }, 1000);
+    setCount(4);
   };
 
   return (
