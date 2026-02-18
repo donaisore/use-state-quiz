@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { QuizContainer } from "./QuizContainer";
+import sourceCode from "./Quiz6.tsx?raw";
 
 export const Quiz6 = () => {
   const [email, setEmail] = useState("");
@@ -11,7 +12,7 @@ export const Quiz6 = () => {
   };
 
   return (
-    <QuizContainer title="Quiz6" onClick={handleClick}>
+    <QuizContainer title="Quiz6" onClick={handleClick} sourceCode={sourceCode}>
       <span>違う state を同時に更新します。何回 rendering される？</span>
 
       <p>email: {email}</p>

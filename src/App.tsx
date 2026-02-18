@@ -37,17 +37,19 @@ function App() {
   );
 
   return (
-    <>
-      Quiz
-      {Object.keys(numberComponentMap).map((key) => (
-        <button
-          key={key}
-          className={styles.button}
-          onClick={handleClick(Number(key) as NumberComponentMapKey)}
-        >
-          {key}
-        </button>
-      ))}
+    <div className={styles.app}>
+      <div className={styles.header}>
+        Quiz
+        {Object.keys(numberComponentMap).map((key) => (
+          <button
+            key={key}
+            className={styles.button}
+            onClick={handleClick(Number(key) as NumberComponentMapKey)}
+          >
+            {key}
+          </button>
+        ))}
+      </div>
       <div className={styles.container}>
         {QuizComponent && (
           <div className={styles.item}>
@@ -55,7 +57,7 @@ function App() {
           </div>
         )}
       </div>
-    </>
+    </div>
   );
 }
 

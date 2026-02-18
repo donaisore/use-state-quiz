@@ -1,15 +1,19 @@
+.app {
+  padding: 24px;
+}
+
+.header {
+  margin-bottom: 24px;
+}
+
 .button {
   margin-left: 4px;
 }
 
 .container {
-  display: flex;
-  flex-wrap: wrap;
-  height: calc(100vh - 100px);
+  width: 100%;
 }
 
 .item {
-  display: flex;
-  /* flex: 1 1 40%;
-  height: 30% ; */
+  width: 100%;
 }

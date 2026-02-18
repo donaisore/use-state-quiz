@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { QuizContainer } from "./QuizContainer";
+import sourceCode from "./Quiz3.tsx?raw";
 
 export const Quiz3 = () => {
   const [count, setCount] = useState(0);
@@ -10,7 +11,7 @@ export const Quiz3 = () => {
   };
 
   return (
-    <QuizContainer title="Quiz3" onClick={handleClick}>
+    <QuizContainer title="Quiz3" onClick={handleClick} sourceCode={sourceCode}>
       <span>handleClick 内で `setCount()` を2度呼んでいる。</span>
       <span>この時、Quiz3 の再レンダリング回数は？</span>
       <span>count の表示はどうなる？ 1 が一瞬ちらついて 2 ?</span>

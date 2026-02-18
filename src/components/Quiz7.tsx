@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { QuizContainer } from "./QuizContainer";
+import sourceCode from "./Quiz7.tsx?raw";
 
 export const Quiz7 = () => {
   const [count, setCount] = useState(0);
@@ -14,7 +15,7 @@ export const Quiz7 = () => {
   };
 
   return (
-    <QuizContainer title="Quiz7" onClick={handleClick}>
+    <QuizContainer title="Quiz7" onClick={handleClick} sourceCode={sourceCode}>
       <span>何回 rendering される？</span>
       <span>button をクリックした後の count は？</span>
       <p>{count}</p>

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { QuizContainer } from "./QuizContainer";
+import sourceCode from "./Quiz2.tsx?raw";
 
 export const Quiz2 = () => {
   const [array, setArray] = useState([1, 2]);
@@ -11,7 +12,7 @@ export const Quiz2 = () => {
   };
 
   return (
-    <QuizContainer title="Quiz2" onClick={handleClick}>
+    <QuizContainer title="Quiz2" onClick={handleClick} sourceCode={sourceCode}>
       <span>button を click すると [1, 2] が [1, 2, 3] になる。</span>
       <span>この時、この Component は再 rendering される？</span>
 
