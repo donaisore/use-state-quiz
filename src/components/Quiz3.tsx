@@ -21,4 +21,4 @@ export const Quiz3 = () => {
   );
 };
 
-//https://ja.react.dev/learn/queueing-a-series-of-state-updates
+// https://ja.react.dev/learn/queueing-a-series-of-state-updates
