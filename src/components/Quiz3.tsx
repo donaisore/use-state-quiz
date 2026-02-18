@@ -14,11 +14,11 @@ export const Quiz3 = () => {
     <QuizContainer title="Quiz3" onClick={handleClick} sourceCode={sourceCode}>
       <span>handleClick 内で `setCount()` を2度呼んでいる。</span>
       <span>この時、Quiz3 の再レンダリング回数は？</span>
-      <span>count の表示はどうなる？ 1 が一瞬ちらついて 2 ?</span>
+      <span>count の表示はどうなる？</span>
+      <span>1 が(見えないくらい)一瞬ちらついて 2 が表示される?</span>
+      <span>いきなり 2 が表示される?</span>
 
       <p>{count}</p>
     </QuizContainer>
   );
 };
-
-// https://ja.react.dev/learn/queueing-a-series-of-state-updates

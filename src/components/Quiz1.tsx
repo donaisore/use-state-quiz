@@ -2,8 +2,6 @@ import { useState } from "react";
 import { QuizContainer } from "./QuizContainer";
 import sourceCode from "./Quiz1.tsx?raw";
 
-// https://ja.react.dev/reference/react/useState#setstate-caveats
-
 export const Quiz1 = () => {
   const [count, setCount] = useState(0);
 

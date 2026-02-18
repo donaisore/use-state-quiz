@@ -11,6 +11,10 @@ export const Quiz0 = () => {
 
   return (
     <QuizContainer title="Quiz0" onClick={handleClick} sourceCode={sourceCode}>
+      <span>
+        button をクリックすると、1度再レンダリングされ、console.log
+        が出力されます
+      </span>
       <p>{count}</p>
     </QuizContainer>
   );

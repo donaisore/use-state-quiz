@@ -22,5 +22,3 @@ export const Quiz2 = () => {
     </QuizContainer>
   );
 };
-
-// https://ja.react.dev/reference/react/useState#setstate-caveats
